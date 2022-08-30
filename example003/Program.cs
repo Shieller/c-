@@ -1,13 +1,17 @@
-﻿Console.WriteLine("ВВедите имя пользователя");
-string username = Console.ReadLine();
+﻿
+Console.WriteLine("Введите цифру от 1 до 7");
+string? numberstring = Console.ReadLine();
+int n = int.Parse(numberstring!);
 
-if(username.ToLower() == "маша")
+if(n>5 & n<8)
 {
-    Console.WriteLine("Ура маша");
-
+Console.WriteLine("Да");
+}
+else if (n<5 & n>0)
+{
+   Console.WriteLine("Нет"); 
 }
 else
 {
-    Console.Write("Hello, ");
-    Console.WriteLine(username);
+    Console.WriteLine("Неправельный ввод");
 }
