@@ -1,7 +1,7 @@
-﻿double numberA = new Random().Next(1,10); // 0 1 2 3 4 5 6 7 8 9
-Console.WriteLine(numberA);
-double numberB = new Random().Next(1,10);
-Console.WriteLine(numberB);
-double result = numberA / numberB;
-Console.WriteLine(result);
-
+﻿Console.WriteLine("Введите пятизначное число");
+string? numberstring = Console.ReadLine();
+int n = int.Parse(numberstring!);
+for (int i=1; i < n+1; i++){
+    Console.WriteLine(i*i*i);
+}
+ 
