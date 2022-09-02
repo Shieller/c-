@@ -1,4 +1,8 @@
-﻿int[] createarray()
+﻿//Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+
+//[3 7 22 2 78] -> 76
+
+int[] createarray()
 {
     Console.WriteLine("ВВедите размерность массива");
     var n = int.Parse(Console.ReadLine()!);
@@ -12,15 +16,20 @@
 }
 int Check(int[] array)
 {
-    var result = 0;
+    var max = 0;
+    var min = 100;
     for (long i = 0; i < array.Length; i++)
     {
-        if (i % 2 == 0)
+        if (min > array[i])
         {
-            result += array[i];
+            min = array[i];
+        }
+        if (max < array[i])
+        {
+            max = array[i];
         }
     }
-    return result;
+    return (max - min);
 }
 var array = createarray();
 for (var i = 0; i < array.Length; i++)
