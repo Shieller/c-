@@ -14,9 +14,9 @@ int[,] СreateArray()
     var n = int.Parse(Console.ReadLine()!);
     var random = new Random();
     var array = new int[m, n];
-    for (long i = 0; i < m; i++)
+    for (int i = 0; i < m; i++)
     {
-        for (long j = 0; j < n; j++)
+        for (int j = 0; j < n; j++)
         {
             array[i, j] = random.Next(0, 10);
         }
@@ -27,9 +27,9 @@ int AverageValue(int[,] array)
 {
 double result = 0;
     Console.Write("Среднее арифметическое каждого столбца : ");
-    for (long i = 0; i < array.GetLength(1); i++)
+    for (int i = 0; i < array.GetLength(1); i++)
     {
-        for (long j = 0; j < array.GetLength(0); j++)
+        for (int j = 0; j < array.GetLength(0); j++)
         {
             result+=array[j,i];
         }
@@ -40,18 +40,17 @@ Console.WriteLine();
 return 0;
 }
 
-int Conclusion()
+void Conclusion()
 {
     var array = СreateArray();
     var result = AverageValue(array);
-    for (long i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (long j = 0; j < array.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
             Console.Write(array[i, j] + " ");
         }
         Console.WriteLine();
     }
-    return 0;
 }
-var result = Conclusion();
+Conclusion();

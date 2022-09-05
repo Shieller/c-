@@ -14,9 +14,9 @@ int[,] СreateArray()
     var n = int.Parse(Console.ReadLine()!);
     var random = new Random();
     var array = new int[m, n];
-    for (long i = 0; i < m; i++)
+    for (int i = 0; i < m; i++)
     {
-        for (long j = 0; j < n; j++)
+        for (int j = 0; j < n; j++)
         {
             array[i, j] = random.Next(0, 10);
         }
@@ -28,9 +28,9 @@ bool CheckNumbInMassive(int[,] array)
     Console.WriteLine("ВВедите число которе хотите проверить");
     var n = int.Parse(Console.ReadLine()!);
 
-    for (long i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (long j = 0; j < array.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
             if (array[i, j] == n)
             {
@@ -41,13 +41,13 @@ bool CheckNumbInMassive(int[,] array)
     return false;
 }
 
-int Conclusion()
+void Conclusion()
 {
     var array = СreateArray();
     bool result = CheckNumbInMassive(array);
-    for (long i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (long j = 0; j < array.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
             Console.Write(array[i, j] + " ");
         }
@@ -63,6 +63,5 @@ int Conclusion()
         Console.WriteLine("Вашего числа нету");
     }
 
-    return 0;
 }
-var result = Conclusion();
+Conclusion();
