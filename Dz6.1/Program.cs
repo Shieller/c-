@@ -16,6 +16,7 @@ int[] СreateArray()
     }
     return array;
 }
+
 int CheckPositiveNumb(int[] array)
 {
     var count = 0;
